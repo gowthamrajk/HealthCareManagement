@@ -1,0 +1,27 @@
+<app-header></app-header>
+
+<div class="heading-text"><b>Doctors List</b></div>
+<small class="subheading-text"><b>(only approved doctors are suggested by the management)</b></small>
+<div class="row">
+        <div *ngFor="let doctor of doctors | async" class="col-4 card" id="bloodCards">
+         <div class="img-block">
+            <div class="circle">
+                <img *ngIf="doctor.gender === 'Male' || doctor.gender === 'male'"  class="bloodimg" [src]="'assets/img/maledoctor.png'" width="100" height="100">
+                <img *ngIf="doctor.gender === 'Female' || doctor.gender === 'female'"  class="bloodimg" [src]="'assets/img/femaledoctor.png'" width="100" height="120">
+            </div>
+        </div>
+        <div class="card-block">
+            <div class="text"><b style="color: maroon;"> {{doctor.doctorname}} </b></div>
+            <div class="text"><b style="color: maroon;"> {{doctor.email}} </b></div>
+            <div class="text"><b style="color: maroon;"> {{doctor.experience}} yrs of experience </b></div>
+            <div class="text"><b style="color: maroon;"> {{doctor.specialization}} </b></div>
+            <div class="text"><b style="color: maroon;"> {{doctor.gender}} </b></div>
+            <div class="text"><b style="color: maroon;"> {{doctor.mobile}} </b></div>
+        </div>
+        <div style="border: none;" class="status-btn" *ngIf="doctor.status === 'accept'"><b style="font-style: italic; font-weight: bolder;">Approved Doctor</b></div>
+        <div style="border: none;" class="status-btn1" *ngIf="doctor.status === 'false'"><b style="font-style: italic; font-weight: bolder;">Approval Pending</b></div>
+        <div style="border: none;" class="status-btn2" *ngIf="doctor.status === 'reject'"><b style="font-style: italic; font-weight: bolder;">Not Approved</b></div>
+        </div>
+</div>
+<br><br><br>
+<app-footer></app-footer>

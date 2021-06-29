@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Merienda+One&family=Staatliches&display=swap');
+
+.menu{
+  position:relative;
+  background-color:#2a3950;
+  width:0px;
+  height:115vh;
+  float:left;
+  transition:all 0.3s ease;
+  transform:translateX(-300px);
+}
+.menuToggle{
+  font-size:20px;
+  position:relative;
+  display:inline-block;
+  padding:10px;
+  text-align:center;
+  background-color:#192538;
+  color:white;
+  width:50px;
+  height:50px;
+  transition:all 0.3s ease;
+}
+.menuToggle:hover{
+  text-decoration:none;
+  color:white;
+}
+.menuToggle_open{
+  margin:0px 0px;
+  transform:rotate(90deg);
+}
+.hideMenu{
+  transition:all 0.3s ease;
+  transform:translateX(0px);
+  width:200px;
+}
+
+.menu ul{
+  list-style-type: none;
+  padding:0px;
+  transition:all 0.3s ease;
+}
+.menu ul ul{
+  padding-left:10px;
+  margin-left:0px;
+  background-color:#192539;
+}
+.menu ul li{
+  border-bottom: 1px solid transparent;
+  transition:all 0.3s ease;
+}
+.menu ul li:hover{
+  background-color: #192539;
+  border-bottom: 1px solid #4274c8;
+}
+.menu ul li:hover a{
+  color:white;
+}
+.menu ul li a{
+  padding:10px 10px;
+  display:block;
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  font-size: 18px;
+  color:white;
+  transition: transform .2s;
+  -webkit-transition: background-color 1s ease-out;
+-moz-transition: background-color 1s ease-out;
+-o-transition: background-color 1s ease-out;
+transition: background-color 1s ease-out;
+}
+.menu ul li a:hover{
+  text-decoration:none;
+}
+
+#userimg{
+  width: 100px;
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-top: 5%;
+  margin-right: auto;
+}
+.container
+{
+  margin-left: 10%;
+}
+.dashboard-card
+{
+  background-color: rgb(21, 95, 95);
+  border-radius: 10px;
+  border: none;
+  width: 35%;
+  margin: 2% 5% 5.5% 5%;
+  box-shadow: 5px 10px 18px #888888;
+  padding: 3%;
+}
+.circle{
+  border-radius: 50%;
+  width: 30%;
+  height: 80px;
+  float: right;
+  background-color: rgb(255, 255, 255);
+}
+#icons
+{
+  margin-left: 26%;
+  margin-top: 12%;
+  font-size: 3.5em;
+}
+.text
+{
+  font-family: 'aladin';
+  letter-spacing: 1px;
+  font-size: 35px;
+  font-weight: bolder;
+  color: white;
+}
+.sub-text
+{
+  font-family: 'aladin';
+  letter-spacing: 1px;
+  font-size: 25px;
+  color: white;
+}

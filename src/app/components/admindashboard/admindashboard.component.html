@@ -1,0 +1,71 @@
+<app-header></app-header>
+<button class='menuToggle'>&#9776;</button>
+<div class="menu">
+  <ul>
+    <li>
+        <div class="card" style="width:200px; background-color: #23ad9b;">
+            <div id="userimg" style="width:150px;">
+            <img [src]="'assets/img/admin.png'" alt="Card image" style="width:100%">
+            </div>
+            <div style="margin-left: auto; margin-right: auto;"  class="card-body">
+              <h4 style="font-weight: bolder;" class="card-title"><b>{{name}}</b></h4>
+            </div>
+          </div>
+    </li>  
+    <li>
+      <a><i class="fa fa-plus" aria-hidden="true"></i><label [routerLink]="['/addDoctor']" style="cursor: pointer;">&nbsp; Add Doctor</label></a>
+    </li>
+    <li>
+      <a><i class="fa fa-check" aria-hidden="true"></i><label [routerLink]="['/approvedoctors']" style="cursor: pointer;">&nbsp; Approve Doctors</label></a>
+    </li>
+    <li>
+      <a><i class="fa fa-user-md" aria-hidden="true"></i><label [routerLink]="['/doctorlist']" style="cursor: pointer;">&nbsp; Doctor List</label></a>
+    </li>
+    <li>
+      <a><i class="fa fa-user" aria-hidden="true"></i><label [routerLink]="['/userlist']" style="cursor: pointer;">&nbsp; Users</label></a>
+    </li>
+    <li>
+      <a><i class="fa fa-user-o" aria-hidden="true"></i><label [routerLink]="['/patientlist']" style="cursor: pointer;">&nbsp; Patients</label></a>
+    </li>
+  </ul>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div style="color: maroon; font-weight: bolder; font-family: aladin; letter-spacing: 1px; font-size: 40px; margin: 0% 0% 1% 9%;"><b>Welcome to HealthCare Management System Admin Dashboard</b></div>
+    <div style="color: darkgreen; font-weight: bold; font-size: 22px; margin: 0% 0% 2% 33%;"><b>[Author - GowthamRaj K]</b></div>
+    <div class="dashboard-card">
+        <div class="circle"><i id="icons" class="fa fa-user-md"></i></div>
+        <div class="text">Total Users</div>
+        <div class="sub-text" *ngFor="let user of users | async">{{user}} users</div>
+      </div>
+      <div class="dashboard-card" style="background-color: rgb(26, 109, 74);">
+        <div class="circle"><i id="icons" class="fa fa-user"></i></div>
+        <div class="text" >Total Doctors</div>
+        <div class="sub-text" *ngFor="let doctor of doctors | async">{{doctor}} doctors</div>
+      </div>
+      <div class="dashboard-card" style="background-color: rgb(88, 45, 25);">
+        <div class="circle"><i id="icons" class="fa fa-calendar"></i></div>
+        <div class="text">Total Slots</div>
+        <div class="sub-text" *ngFor="let slot of slots | async">{{slot}} slots available</div>
+      </div>
+      <div class="dashboard-card" style="background-color: rgb(87, 92, 27);">
+        <div class="circle"><i id="icons" class="fa fa-user-o"></i></div>
+        <div class="text">Total Patients</div>
+        <div class="sub-text" *ngFor="let patient of patients | async">{{patient}} patients</div>
+      </div>
+      <div class="dashboard-card" style="background-color: rgb(133, 134, 23);">
+        <div class="circle"><i id="icons" class="fa fa-sticky-note"></i></div>
+        <div class="text">Prescriptions</div>
+        <div class="sub-text" *ngFor="let prescription of prescriptions | async">{{prescription}} medications</div>
+      </div>
+      <div class="dashboard-card" style="background-color: rgb(20, 21, 99);">
+        <div class="circle"><i id="icons" class="fa fa-check"></i></div>
+        <div class="text">Appointments</div>
+        <div class="sub-text" *ngFor="let appointment of appointments | async">{{appointment}} appointments</div>
+      </div>      
+  </div>
+</div>
+
+<br><br><br><br><br><br>
+<app-footer></app-footer>

@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+
+.sidebar-text
+  {
+      font-size: small;
+  }
+  .sidebar-logo {
+    padding: 10px 15px 10px 30px;
+    font-size: 20px;
+    text-align: right;
+    background-color: #13534e;
+    width: 100%;
+  }
+  .logoutbtn{
+    border: none;
+    background:transparent;
+    color: white;
+    border-radius: 15px;
+    margin-left: 1px;
+    margin-right: 1%;
+    padding: 5px 10px 5px 10px;
+    font-size: small;
+  }
+  .logoutbtn:hover{
+    cursor: pointer;
+    background-color: #23ad9b;
+    padding: 5px 8px 5px 8px;
+    border-radius: 15px;
+  }
+.container
+{
+    max-width: 600px;
+    padding: 40px 40px 25px 40px;
+    margin-top: 3%; 
+    border-radius: 10px; 
+    box-shadow: 5px 5px 35px 8px rgb(147, 158, 147); 
+    background-color: white;
+    margin-bottom: 5%;
+}
+input{
+    border-radius: 12px;
+    margin-top: 8px;
+}
+.textual
+{
+    color: rgb(64, 85, 15); 
+    text-align: center; 
+    margin-top: -20px;
+    font-family: 'Oswald', sans-serif;
+    padding: 5px;
+    text-transform: uppercase;
+}
+label{
+    margin-top: 8px;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+.registerbtn
+{
+    background-color: transparent;
+    padding-left: 8%;
+    padding-right: 8%;
+    margin: auto;  
+    padding-bottom: 7px;
+    border-radius: 15px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border: 1px solid black;
+}
+.registerbtn:hover
+{
+    background-color: rgb(23, 78, 78);
+    padding-left: 7%;
+    padding-right: 7%;
+    cursor: pointer;
+    color: white;
+}
+
+.row
+  {
+    margin-left: 30%;
+    margin-top: 3%;
+  }
+  #bloodCards
+  {
+    margin-right: 5%;
+    margin-bottom: 15%;
+    width: 55%;
+    border-radius: 10px;
+    transition: transform .2s;
+    padding-left: 2%;
+    box-shadow: 5px 5px 25px 8px rgb(147, 158, 147);
+  }
+  #bloodCards:hover
+  {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+.bloodimg
+{
+  float: right;
+}
+.card-block
+{
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.text{
+  font-family: serif;
+  font-size: larger;
+  font-weight: bolder;
+}
+.editbtn
+{
+  border: none;
+  border-radius: 15px;
+  color: white;
+  padding: 5px 20px 5px 20px;
+  margin-top: 5%;
+  margin-bottom: 1%;
+  background-color: #13534e;
+}
+.editbtn:hover{
+  cursor: pointer;
+}
+
+.btndiv{
+  margin-left: 40%;
+  align-content: center;
+}

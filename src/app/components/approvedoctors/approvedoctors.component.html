@@ -1,0 +1,61 @@
+<app-header></app-header>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2 style="text-align: center; font-family: 'Oswald', sans-serif;color: green; margin-top: 3%; margin-bottom: 3%;"> Approve Doctors Here <small>(after proper verification)</small> </h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Idendity</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Experience</th>
+            <th>Specialization</th>
+            <th>Worked at</th>
+            <th>mobile</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let doctor of doctors | async">
+            <td><img *ngIf="doctor.gender === 'Male' || doctor.gender === 'male'" class="bloodimg" [src]="'assets/img/maledoctor.png'" width="80" height="80">
+              <img *ngIf="doctor.gender === 'Female' || doctor.gender === 'female'" class="bloodimg" [src]="'assets/img/femaledoctor.png'" width="80" height="80">
+              </td>
+            <td>{{doctor.doctorname}}</td>
+            <td>{{doctor.email}}</td>
+            <td>{{doctor.gender}}</td>
+            <td style="color: maroon; font-size: 25px;">{{doctor.experience}} years</td>
+            <td style="color: maroon; font-size: 25px;">{{doctor.specialization}} </td>
+            <td style="color: navy;">{{doctor.previoushospital}} hospital</td>
+            <td>{{doctor.mobile}}</td>
+            <td>
+                <div *ngIf="loggedUser === 'admin@gmail.com' && doctor.status === 'false'" >
+                  <button (click)="acceptRequest(doctor.email)" id="acceptbtn" value="doctor.email" value="Accept" style="margin-bottom: 5px;" class="accepted">Accept</button><br>
+                  <button (click)="rejectRequest(doctor.email)" id="rejectbtn" value="doctor.email" value="Reject" class="rejected">Reject</button>
+                  <div id="acceptedbtn" class="accepted" style="display: none;">Accepted</div>
+                  <div id="rejectedbtn" class="rejected" style="display: none;">Rejected</div>
+                </div>
+                <div *ngIf="loggedUser === 'admin@gmail.com' && doctor.status === 'accept'" >
+                  <div class="accepted">Accepted</div>
+                </div>
+                <div *ngIf="loggedUser === 'admin@gmail.com' && doctor.status === 'reject'" >
+                  <div class="rejected">Rejected</div>
+                </div>
+                <div *ngIf="currRole === 'doctor' || currRole === 'DOCTOR' && doctor.status === 'accept' && doctor.email === loggedUser">
+                    <div *ngIf="doctor.status === 'accept'" class="accepted">Accepted</div>
+                    <div *ngIf="doctor.status === 'false'" class="pending">Pending</div>
+                    <div *ngIf="doctor.status === 'reject'" class="rejected">Rejected</div>
+                </div>
+                <div *ngFor="let details of responses | async"></div>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<br><br><br><br><br><br><br><br>
+<app-footer></app-footer>

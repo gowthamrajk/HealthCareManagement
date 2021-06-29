@@ -1,0 +1,96 @@
+<app-header></app-header>
+
+<div class="message" id="messagecard"><b>{{message}}</b></div>
+
+<div class="container" id="appointmentform">
+    <h2 class="textual" style="color: darkgreen"><i class="fa fa-calendar"></i><b> Book Your New appointments </b></h2>
+    <small style="color:maroon; font-weight: bold; margin-left: 15%;"> Please check doctor's availability before booking your respective slot</small>
+    <form #bookappointmentform="ngForm" (ngSubmit)="bookAppointment()">
+        
+        <div class="form-group">
+            <label for="patientname">Patient Name : <b class="text-danger">*</b><small style="color: gray; font-size: 12px;"> (please enter full name of the patient with initial)</small></label>
+            <input type="text" class="form-control" placeholder="enter your name" name="patientname" [(ngModel)]="appointment.patientname" required 
+            #patientname="ngModel"
+            [class.is-invalid]="patientname.invalid && patientname.touched">
+           <small class="text-danger" [class.d-none]="patientname.valid || patientname.untouched"><b>required field</b></small>
+        </div>
+
+        <div class="form-group">
+            <label for="patientemail"> Email address : <b class="text-danger">*</b><small style="color: gray; font-size: 12px;"> (please enter a valid email address)</small></label>
+            <input type="email" class="form-control" placeholder="enter email address" name="patientemail" [(ngModel)]="appointment.email" required pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+            #patientemail="ngModel"
+            [class.is-invalid]="patientemail.invalid && patientemail.touched">
+            <div *ngIf="patientemail.errors && (patientemail.invalid && patientemail.touched)">
+                <small class="text-danger" *ngIf="patientemail.errors.required"><b>required field</b></small>
+                <small class="text-danger" *ngIf="patientemail.errors.pattern"><b>Invalid email Id</b></small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="doctor">Choose Doctor : <b class="text-danger">* </b><small style="color: gray; font-size: 12px;">(choose from dropdown)</small></label>
+            <select class="form-control" id="sel1" name="doctor" [(ngModel)]="appointment.doctorname"
+            #doctor="ngModel">
+                <option selected="true">select doctor</option>
+                <option *ngFor="let doctor of doctors | async">{{doctor}}</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="specialization">Specialization : <b class="text-danger">* </b><small style="color: gray; font-size: 12px;">(choose from dropdown)</small></label>
+            <select class="form-control" id="sel1" name="specialization" [(ngModel)]="appointment.specialization"
+            #specialization="ngModel">
+                <option selected="true">select speciality</option>
+                <option *ngFor="let speciality of specializations | async">{{speciality}}</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="date">Appointment Date : <b class="text-danger">*</b><small style="color: gray; font-size: 12px;"> (please choose proper date as per slot availability)</small></label>
+            <input type="date" class="form-control" placeholder="choose appointment date" name="date" [(ngModel)]="appointment.date" required 
+            #date="ngModel"
+            [class.is-invalid]="date.invalid && date.touched">
+           <small class="text-danger" [class.d-none]="date.valid || date.untouched"><b>required field</b></small>
+        </div>
+
+        <div class="form-group">
+            <label for="slot">Appointment Slot : <b class="text-danger">* </b><small style="color: gray; font-size: 12px;">(choose from dropdown)</small></label>
+            <select class="form-control" id="sel1" name="slot" [(ngModel)]="appointment.slot"
+            #slot="ngModel">
+                <option>AM slot</option>
+                <option>Noon slot</option>
+                <option>PM slot</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="age">Patient Age : <b class="text-danger">*</b><small style="color: gray; font-size: 12px;"> (please enter proper age of the patient)</small></label>
+            <input type="text" class="form-control" placeholder="enter your age" name="age" [(ngModel)]="appointment.age" required 
+            #age="ngModel"
+            [class.is-invalid]="age.invalid && age.touched">
+           <small class="text-danger" [class.d-none]="age.valid || age.untouched"><b>required field</b></small>
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Patient Gender : <b class="text-danger">* </b></label>
+            <select class="form-control" id="sel1" name="gender" [(ngModel)]="appointment.gender"
+            #gender="ngModel">
+                <option>Male</option>
+                <option>Female</option>
+                <option>others</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="problem">Patient's Problem : <b class="text-danger">*</b></label>
+            <input type="text" class="form-control" placeholder="enter your problem" name="problem" [(ngModel)]="appointment.problem" required 
+            #problem="ngModel"
+            [class.is-invalid]="problem.invalid && problem.touched">
+           <small class="text-danger" [class.d-none]="problem.valid || problem.untouched"><b>required field</b></small>
+        </div>
+
+      <button style="margin-top: 15px;" [disabled]="bookappointmentform.form.invalid" type="submit" class="btn registerbtn"><i class="fa fa-plus"></i>&nbsp; Book Your Appointment</button>
+    </form>
+  </div>
+
+<br><br>
+<app-footer></app-footer>

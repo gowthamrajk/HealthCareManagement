@@ -1,0 +1,53 @@
+<app-header></app-header>
+
+<div class="heading"><h1>Your Prescription</h1></div>
+<div class="message" id="messagecard">
+    <form #tempform="ngForm" (ngSubmit)="searchPrescription()">
+    <div class="form-group">
+        <label for="patientname">Patient Name : <b class="text-danger">*</b></label>
+        <input type="text" class="form-control" placeholder="enter patient name" name="patientname" [(ngModel)]="this.name" required 
+        #patientname="ngModel"
+        [class.is-invalid]="patientname.invalid && patientname.touched">
+       <small class="text-danger" [class.d-none]="patientname.valid || patientname.untouched"><b>required field</b></small>
+    </div>
+    <button style="margin-top: 15px;" [disabled]="tempform.form.invalid" type="submit" class="btn registerbtn"><i class="fa fa-check"></i>&nbsp; search Prescription </button>
+</form>
+</div>
+<div  *ngFor="let patient of prescriptionlist | async" id="prescriptionpages">
+    <button id="printbtn" (click)="onPrint()" style="background-color: rgb(13, 53, 80); padding: 0.5% 3% 0.5% 3%; color: white; margin-left: 85%; border: none; border-radius: 15px;"><i class="fa fa-print"></i> &nbsp;Print</button>
+<div class="prescription-card" style="margin-bottom: 6%; margin-top: -2.5%;"><br>
+    <div class="header-flag">
+        <div style="margin-left: 5%;" class="topname"><h3>Healthcare Management System</h3></div>
+        <div style="margin-left: 15%;" class="topname"><h5>[developed by Gowthamraj K]</h5></div>
+        <img style="margin-left: 75%; margin-top: -17%;" [src]="'assets/img/medicinelogo.png'" width="120" height="90">
+    </div>
+    <div class="prescription-body">
+        <hr>
+        <div style="color: rgb(30, 113, 146); font-weight: bold;">Dr.{{patient.doctorname}} MBBS,MS,PhD</div>
+        <div style="color: black; font-weight: bold; margin-top: -5%; margin-left:70%;"><small style="color: rgb(9, 68, 70);"><b>PatientID : </b><b style="color: maroon;">{{patient.patientid}}</b></small></div>
+        <div style="color: black; font-weight: bold;"><small style="color: rgb(9, 68, 70);"><b>Age : </b><b style="color: darkblue;">{{patient.age}}</b></small></div>
+        <div style="color: black; font-weight: bold; margin-top: -5%; margin-left:74.5%;"><small style="color: rgb(9, 68, 70);"><b>Date : </b><b style="color: darkblue;">{{patient.date}}</b></small></div>
+        <hr><br>
+        <div style="color: black; font-weight: 600;">Please find your respective treatment prescription from your doctor...</div>
+        <br>
+         <div style="color: darkblue; font-weight: 800; margin-bottom: 1%;">Patient Name : <b style="color: maroon; margin-left: 12%;">{{patient.patientname}}</b></div>
+         <div style="color: darkblue; font-weight: 800; margin-bottom: 1%;">Gender : <b style="color: maroon; margin-left: 22%;">{{patient.gender}}</b></div>
+         <div style="color: darkblue; font-weight: 800; margin-bottom: 1%;">Patient Disease : <b style="color: maroon; margin-left: 9%;">{{patient.disease}}</b></div>
+         <div style="color: darkblue; font-weight: 800; margin-bottom: 2%;">Prescription : <b style="color: maroon; margin-left: 14.5%;">{{patient.prescription}}</b></div>
+         <div style="color: darkblue; font-weight: 800; margin-bottom: 1%; ">Admission Status : 
+            <b style="color: white; background-color: rgb(245, 168, 24); border-radius: 15px; padding: 5px 15px 5px 15px; margin-left: 6%;" *ngIf="patient.admissionstatus === 'false'">Admission Pending</b>
+            <b style="color: white; background-color: darkgreen; border-radius: 15px; padding: 5px 15px 5px 15px; margin-left: 6%;" *ngIf="patient.admissionstatus === 'accept'">Admitted</b>
+            <b style="color: white; background-color: red; border-radius: 15px; padding: 5px 15px 5px 15px; margin-left: 6%;" *ngIf="patient.admissionstatus === 'reject'">Rejected</b>
+        </div>
+         <br><br>
+         <div style="margin-left: 20%; font-weight: 600;">(Follow the above given prescriptions properly)</div>
+         <div style="margin-left: 40%; font-weight: 600;">Get Well Soon !!!!</div>
+    </div>
+    <div class="footer-flag" style="padding: 15px; color: white; margin-bottom: 3%;">
+        <div style="margin-left: 5%; float: left;"><h6><i class="fa fa-phone"></i> &nbsp;9698382306 / 8610254674</h6></div>
+        <div style="margin-right: 5%; float: right;"><h6><i class="fa fa-envelope"></i> &nbsp;gowthamraj692@gmail.com</h6></div>
+    </div>
+</div>
+</div>
+<br><br><br><br>
+<app-footer></app-footer>

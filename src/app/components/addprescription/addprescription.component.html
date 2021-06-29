@@ -1,0 +1,65 @@
+<app-header></app-header>
+
+<div class="message" id="messagecard"><b>{{message}}</b></div>
+
+<div class="container" id="appointmentform">
+    <h2 class="textual" style="color: darkgreen"><i class="fa fa-sticky-note-o"></i><b> Hello Doctor, Add Your Prescriptions </b></h2>
+    <form #addprescriptionform="ngForm" (ngSubmit)="addPrescription()">
+        
+        <div class="form-group">
+            <label for="patientname">Patient Name : <b class="text-danger">*</b><small style="color: gray; font-size: 12px;"> (choose from the dropdown)</small></label>
+            <select class="form-control" id="sel1" name="patientname" [(ngModel)]="prescriptionobj.patientname"
+            #patientname="ngModel">
+                <option selected="true">select patient</option>
+                <option *ngFor="let patient of appointment | async">{{patient.patientname}}</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="doctorname">Doctor Name : <b class="text-danger">*</b><small style="color: gray; font-size: 12px;"> (please enter your name here)</small></label>
+            <input type="text" class="form-control" placeholder="enter your name" name="doctorname" [(ngModel)]="prescriptionobj.doctorname" required 
+            #doctorname="ngModel"
+            [class.is-invalid]="doctorname.invalid && doctorname.touched">
+           <small class="text-danger" [class.d-none]="doctorname.valid || doctorname.untouched"><b>required field</b></small>
+        </div>
+
+        <div class="form-group">
+            <label for="disease">Patient's Disease : <b class="text-danger">*</b></label>
+            <input type="text" class="form-control" placeholder="enter patient disease" name="disease" [(ngModel)]="prescriptionobj.disease" required 
+            #disease="ngModel"
+            [class.is-invalid]="disease.invalid && disease.touched">
+           <small class="text-danger" [class.d-none]="disease.valid || disease.untouched"><b>required field</b></small>
+        </div>
+
+        <div class="form-group">
+            <label for="age">Patient Age : <b class="text-danger">*</b><small style="color: gray; font-size: 12px;"> (please enter proper age of the patient)</small></label>
+            <input type="text" class="form-control" placeholder="enter your age" name="age" [(ngModel)]="prescriptionobj.age" required 
+            #age="ngModel"
+            [class.is-invalid]="age.invalid && age.touched">
+           <small class="text-danger" [class.d-none]="age.valid || age.untouched"><b>required field</b></small>
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Patient Gender : <b class="text-danger">* </b></label>
+            <select class="form-control" id="sel1" name="gender" [(ngModel)]="prescriptionobj.gender"
+            #gender="ngModel">
+                <option>Male</option>
+                <option>Female</option>
+                <option>others</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="prescription">Prescription : <b class="text-danger">*</b></label>
+            <textarea type="text" rows = "5" class="form-control" placeholder="enter your prescription here" name="prescription" [(ngModel)]="prescriptionobj.prescription" required 
+            #prescription="ngModel"
+            [class.is-invalid]="prescription.invalid && prescription.touched"></textarea>
+           <small class="text-danger" [class.d-none]="prescription.valid || prescription.untouched"><b>required field</b></small>
+        </div>
+
+      <button style="margin-top: 15px;" [disabled]="addprescriptionform.form.invalid" type="submit" class="btn registerbtn"><i class="fa fa-plus"></i>&nbsp; Add your Prescription </button>
+    </form>
+  </div>
+
+<br><br>
+<app-footer></app-footer>

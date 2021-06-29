@@ -1,0 +1,50 @@
+<app-header></app-header>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2 style="text-align: center; font-family: 'Oswald', sans-serif;color: darkgreen; margin-top: 3%; margin-bottom: 3%;"> Available Booking Slots </h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Name</th>
+            <th>Specialization</th>
+            <th>FN slot</th>
+            <th>Noon slot</th>
+            <th>PM slot</th>
+            <th>Patient Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let doctor of slots | async">
+            <td>
+                <div class="datecover">{{doctor.date}}</div>
+            </td>
+            <td>{{doctor.doctorname}}</td>
+            <td>{{doctor.specialization}}</td>
+            <td>
+                <div *ngIf="doctor.amslot === 'empty'"><b class="noslot">No Slots</b></div>
+                <div *ngIf="doctor.amstatus === 'booked'"><b class="accepted">Booked</b></div>
+                <div *ngIf="doctor.amslot !== 'empty' && doctor.amstatus === 'unbooked'"><b class="pending">{{doctor.amslot}}</b></div>
+            </td>
+            <td>
+                <div *ngIf="doctor.noonslot === 'empty'"><b class="noslot">No Slots</b></div>
+                <div *ngIf="doctor.noonstatus === 'booked'"><b class="accepted">Booked</b></div>
+                <div *ngIf="doctor.noonslot !== 'empty' && doctor.noonstatus === 'unbooked'"><b class="pending">{{doctor.noonslot}}</b></div>
+            </td>
+            <td>
+                <div *ngIf="doctor.pmslot === 'empty'"><b class="noslot">No Slots</b></div>
+                <div *ngIf="doctor.pmstatus === 'booked'"><b class="accepted">Booked</b></div>
+                <div *ngIf="doctor.pmslot !== 'empty' && doctor.pmstatus === 'unbooked'"><b class="pending">{{doctor.pmslot}}</b></div>
+            </td>
+            <td>{{doctor.patienttype}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+<br><br><br><br><br><br><br><br>
+<app-footer></app-footer>

@@ -1,0 +1,45 @@
+<app-header></app-header>
+
+<div class="heading-text"><b>Your Today's Appointments</b></div>
+<small class="subheading-text"><b>(all details of patients have been verified)</b></small>
+<div class="row">
+        <div *ngFor="let patient of appointments | async" class="col-4 card" id="bloodCards">
+         <div class="img-block">
+            <div class="circle">
+                <img *ngIf="patient.gender === 'Male' || patient.gender === 'male'"  class="bloodimg" [src]="'assets/img/maleuser.png'" width="120" height="120">
+                <img *ngIf="patient.gender === 'Female' || patient.gender === 'female'"  class="bloodimg" [src]="'assets/img/femaleuser.png'" width="120" height="120">
+            </div>
+        </div>
+        <div class="card-block">
+            <div class="text"><b style="color: darkblue">Patient ID : </b><b style="color: maroon;"><small class="date-cover">{{patient.patientid}}</small></b></div>
+            <div class="text"><b style="color: darkblue">Patient Name : </b><b style="color: maroon;"> {{patient.patientname}} </b></div>
+            <div class="text"><b style="color: darkblue">Email : </b><b style="color: maroon;"> {{patient.email}} </b></div>
+                <div class="text" *ngFor="let slot of slots | async">
+                    <div *ngIf="patient.slot === 'AM slot' && slot.amstatus === 'booked' && patient.date === slot.date">
+                        <div><b style="color: darkblue; font-weight: bold;">Booked Slot : </b><small class="slotcover">{{slot.amslot}}</small></div>
+                    </div>
+                    <div *ngIf="patient.slot === 'Noon slot' && slot.noonstatus === 'booked' && patient.date === slot.date">
+                        <div><b style="color: darkblue; font-weight: bold;">Booked Slot : </b><small class="slotcover">{{slot.noonslot}}</small></div>
+                    </div>
+                    <div *ngIf="patient.slot === 'PM slot' && slot.pmstatus === 'booked' && patient.date === slot.date">
+                        <div><b style="color: darkblue; font-weight: bold;">Booked Slot : </b><small class="slotcover">{{slot.pmslot}}</small></div>
+                    </div>
+               </div>
+            <div class="text"><b style="color: darkblue">Patient Age : </b><b style="color: maroon;"> {{patient.age}} </b></div>
+            <div class="text"><b style="color: darkblue">Patient Gender : </b><b style="color: maroon;"> {{patient.gender}} </b></div>
+            <div class="text"><b style="color: darkblue">Patient Disease : </b><b style="color: maroon;"> {{patient.problem}} </b></div>
+        </div>
+        <div style="border: none;" class="status-btn1" *ngIf="patient.admissionstatus === 'false'"><b style="font-style: italic; font-weight: bolder;">Admission Pending</b></div>
+        <div *ngIf="patient.appointmentstatus === 'accept' && currRole === 'doctor' || currRole === 'DOCTOR'" >
+            <div class="status-btn">Booking Accepted</div>
+        </div>
+        <div *ngIf="patient.appointmentstatus === 'reject' && currRole === 'doctor' || currRole === 'DOCTOR'" >
+            <div class="status-btn2">Booking Rejected</div>
+        </div>
+        <div *ngIf="patient.appointmentstatus === 'false' && currRole === 'doctor' || currRole === 'DOCTOR'" >
+            <div class="status-btn1">Approval Pending</div>
+        </div>
+    </div>
+</div>
+<br><br><br>
+<app-footer></app-footer>

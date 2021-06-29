@@ -1,0 +1,28 @@
+<!--<div class="sidebar-logo">
+    <div class="welcometxt" style="float: left;"><b style="color: white;">{{title}}</b></div>
+      <button class="logoutbtn" style="color: whitesmoke; margin-right: 1%; font-weight: 600;" (click)="navigateHome()"><i class="fa fa-home"></i> Home</button>
+      <small class="sidebar-text" style="color: whitesmoke; font-weight: 600;"><i class="fa fa-user"></i> {{loggedUser}}</small>
+      <button class="logoutbtn" style="color: whitesmoke; font-weight: 600;" (click)="logout()"><i class="fa fa-sign-out"></i> Logout</button>
+</div>-->
+
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark" class="navCss"  [containerInside]="false">
+  <mdb-navbar-brand><a class="navbar-brand">{{title}}</a></mdb-navbar-brand>
+  <links>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a id="nav-link" class="nav-link waves-light" mdbWavesEffect (click)="navigateHome()"><i class="fa fa-home"></i> Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" mdbWavesEffect> Welcome {{loggedUser}}</a>
+      </li>
+      <li class="nav-item dropdown" dropdown>
+        <a id="nav-link" dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          <i class="fa fa-user"></i> Profile<span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+          <a> {{currRole}}</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect (click)="logout()"><i class="fa fa-sign-out"></i> Log out</a>
+        </div>
+      </li>
+    </ul>
+  </links>
+</mdb-navbar>

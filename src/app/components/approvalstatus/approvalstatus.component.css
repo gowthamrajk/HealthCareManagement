@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+
+.panel-body{
+  margin-left: 1%;
+  margin-right: 2%;
+}
+thead{
+  background-color: rgb(151, 44, 44);
+}
+table, td{
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+}
+table, td, tr{
+  border: 1px solid rgb(163, 161, 161);
+  font-family: serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: large;
+}
+
+th{
+  text-transform: uppercase;
+  color: white;
+  font-family: Helvetica;
+  font-style: italic;
+  font-size: normal;
+}
+td{
+  text-transform:none;
+}
+.accepted{
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(30, 116, 30);
+  padding: 5px 10px 5px 10px;
+  color: white;
+  font-weight: bolder;
+}
+.pending{
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(196, 137, 28);
+  padding: 5px 10px 5px 10px;
+  color: white;
+  font-weight: bolder;
+}
+.rejected{
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: red;
+  padding: 5px 10px 5px 10px;
+  color: white;
+  font-weight: bolder;
+}
+.date-cover{
+  border-radius: 10px;
+  background-color: rgb(10, 15, 68);
+  padding: 5px 10px 5px 10px;
+  color: white;
+  font-weight: bolder;
+}
+.slotcover
+{
+  border-radius: 10px;
+  background-color: rgb(128, 44, 18);
+  padding: 5px 10px 5px 10px;
+  color: white;
+  font-weight: bolder;
+}
+
+.message
+{
+    width: 40%;
+    background-color: white;
+    box-shadow: 5px 5px 35px 8px rgb(147, 158, 147); 
+    height: 40%;
+    border-radius: 25px;
+    font-weight: bolder;
+    font-size: larger;
+    color: maroon;
+    font-family: monospace;
+    padding: 30px;
+    margin-left: auto;
+    font-weight: bolder;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+input{
+    border-radius: 12px;
+    margin-top: 8px;
+}
+label{
+    margin-top: 10px;
+    font-family: 'Volkhov', serif;
+    letter-spacing: 0px;
+    font-size: medium;
+    font-weight: bolder;
+}
+.registerbtn
+{
+    background-color: transparent;
+    padding-left: 8%;
+    padding-right: 8%;
+    margin: auto;  
+    padding-bottom: 7px;
+    border-radius: 15px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border: 1px solid black;
+}
+.registerbtn:hover
+{
+    background-color: rgb(23, 78, 78);
+    padding-left: 7%;
+    padding-right: 7%;
+    cursor: pointer;
+    color: white;
+}

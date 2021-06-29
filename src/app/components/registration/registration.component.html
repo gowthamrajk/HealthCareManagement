@@ -1,0 +1,180 @@
+
+<div class="container register">
+    <div class="row">
+        <div class="col-md-3 register-left">
+            <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+            <h3 style="font-family: 'Merienda One', cursive;">Create Your New Profile Here</h3>
+            <br>
+            <p style="font-family: 'Staatliches', cursive; letter-spacing: 1.5px;">Already Have an Account? </p>
+            <button class="loginbtn" [routerLink]="['/login']" name="loginbtn">Login here</button><br/>
+        </div>
+        <div class="col-md-9 register-right">
+            <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link nav1" id="home-tab" data-toggle="tab" data-target="#home" role="tab" aria-controls="home" aria-selected="true">User</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav2" id="profile-tab" data-toggle="tab" role="tab" aria-controls="profile" aria-selected="false">Doctor</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <h3 class="register-heading">User Registration</h3>
+                    <small class="text-danger"><b>{{msg}}</b></small>
+                    <form #userform="ngForm" (ngSubmit)="registerUser()">
+                    <div class="row register-form">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="user name *" name="username" [(ngModel)]="user.username" required 
+                                #username="ngModel"
+                                [class.is-invalid]="username.invalid && username.touched">
+                                <small style="margin-top: -4%; margin-bottom: 3%;" class="text-danger" [class.d-none]="username.valid || username.untouched"><b>required field</b></small>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="gender *" name="usergender" [(ngModel)]="user.gender" required 
+                                #usergender="ngModel"
+                                [class.is-invalid]="usergender.invalid && usergender.touched">
+                                <small style="margin-top: -4%; margin-bottom: 3%;" class="text-danger" [class.d-none]="usergender.valid || usergender.untouched"><b>required field</b></small>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" placeholder="your age *" name="userage" [(ngModel)]="user.age" required 
+                                #userage="ngModel"
+                                [class.is-invalid]="userage.invalid && userage.touched">
+                                <small style="margin-top: -4%; margin-bottom: 3%;" class="text-danger" [class.d-none]="userage.valid || userage.untouched"><b>required field</b></small>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Password *" name="pwd" [(ngModel)]="user.password" required 
+                                #userpassword="ngModel"
+                                [class.is-invalid]="userpassword.invalid && userpassword.touched">
+                                <div style="margin-top: -4%; margin-bottom: 3%;" *ngIf="userpassword.errors && userpassword.invalid && userpassword.touched">
+                                  <small class="text-danger" *ngIf="userpassword.errors.required"><b>required field</b></small>
+                                </div>
+                                <small style="color: gray; font-size: 10px;">atleast one uppercase, numeric digit, lowercase, special character, length of 6-20</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="email address *" name="useremail" [(ngModel)]="user.email" required pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+                                #useremail="ngModel"
+                                [class.is-invalid]="useremail.invalid && useremail.touched">
+                                <div style="margin-top: -4%; margin-bottom: 3%;" *ngIf="useremail.errors && (useremail.invalid && useremail.touched)">
+                                    <small class="text-danger" *ngIf="useremail.errors.required"><b>required field</b></small>
+                                    <small class="text-danger" *ngIf="useremail.errors.pattern"><b>Invalid email Id</b></small>
+                                  </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" maxlength="10" minlength="10" class="form-control" placeholder="mobile *" name="usermobile" [(ngModel)]="user.mobile" required 
+                                #usermobile="ngModel"
+                                [class.is-invalid]="usermobile.invalid && usermobile.touched">
+                                <small style="margin-top: -4%; margin-bottom: 3%;" class="text-danger" [class.d-none]="usermobile.valid || usermobile.untouched"><b>required field</b></small>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="address *" name="useraddress" [(ngModel)]="user.address" required 
+                                #useraddress="ngModel"
+                                [class.is-invalid]="useraddress.invalid && useraddress.touched">
+                                <small style="margin-top: -4%; margin-bottom: 3%;" class="text-danger" [class.d-none]="useraddress.valid || useraddress.untouched"><b>required field</b></small>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control"  placeholder="Confirm Password *" name="ConfirmPassword" (ngModel)="user.password" required 
+                                #userconfirmPassword="ngModel"
+                                [class.is-invalid]="userconfirmPassword.invalid && userconfirmPassword.touched">
+                                <!--<div style="margin-top: -4%; margin-bottom: 3%;" *ngIf="userconfirmPassword.valid || userconfirmPassword.touched">
+                                    <small class="text-danger" *ngIf="(userconfirmPassword.value == userpassword.value) || userconfirmPassword.touched"><b>password not matched</b></small>
+                                </div>-->
+                                <small style="margin-top: -4%; margin-bottom: 3%;" class="text-danger" [class.d-none]="(userconfirmPassword.value == userpassword.value) || userconfirmPassword.untouched"><b>password not matched</b></small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox" style="margin-top: -8%; margin-left: 11%;">
+                        <small style="color: gray;"><input type="checkbox" class="checkbox" name="remember" required> I agree to all Terms & Conditions</small>
+                    </div>
+                    <button [disabled]="userform.form.invalid" type="submit" class="btnRegister">Register</button>
+                </form>
+                </div>
+                <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <h3  class="register-heading">Doctor Registration</h3>
+                    <small class="text-danger"><b>{{msg}}</b></small>
+                    <form #doctorform="ngForm" (ngSubmit)="registerDoctor()">
+                    <div class="row register-form">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Doctor Name *" name="doctorname" [(ngModel)]="doctor.doctorname" required 
+                                #doctorname="ngModel"
+                                [class.is-invalid]="doctorname.invalid && doctorname.touched">
+                               <small style="margin-top: -4%; margin-bottom: 3%;" class="text-danger" [class.d-none]="doctorname.valid || doctorname.untouched"><b>required field</b></small>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="email address *" name="doctoremail" [(ngModel)]="doctor.email" required pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+                                #doctoremail="ngModel"
+                                [class.is-invalid]="doctoremail.invalid && doctoremail.touched">
+                                <div style="margin-top: -4%; margin-bottom: 3%;" *ngIf="doctoremail.errors && (doctoremail.invalid && doctoremail.touched)">
+                                    <small class="text-danger" *ngIf="doctoremail.errors.required"><b>required field</b></small>
+                                    <small class="text-danger" *ngIf="doctoremail.errors.pattern"><b>Invalid email Id</b></small>
+                                  </div>                          
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="gender *" name="doctorgender" [(ngModel)]="doctor.gender" required 
+                                #doctorgender="ngModel"
+                                [class.is-invalid]="doctorgender.invalid && doctorgender.touched">
+                                <small style="margin-top: -4%; margin-bottom: 3%;" class="text-danger" [class.d-none]="doctorgender.valid || doctorgender.untouched"><b>required field</b></small>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" maxlength="10" minlength="10" class="form-control" placeholder="mobile *" name="doctormobile" [(ngModel)]="doctor.mobile" required 
+                                #doctormobile="ngModel"
+                                [class.is-invalid]="doctormobile.invalid && doctormobile.touched">
+                               <small style="margin-top: -4%; margin-bottom: 3%;" class="text-danger" [class.d-none]="doctormobile.valid || doctormobile.untouched"><b>required field</b></small>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="password *" name="pwd" [(ngModel)]="doctor.password" required 
+                                #doctorpassword="ngModel"
+                                [class.is-invalid]="doctorpassword.invalid && doctorpassword.touched">
+                                <div style="margin-top: -4%; margin-bottom: 3%;" *ngIf="doctorpassword.errors && doctorpassword.invalid && doctorpassword.touched">
+                                  <small class="text-danger" *ngIf="doctorpassword.errors.required"><b>required field</b></small>
+                                </div>
+                                <small style="color: gray; font-size: 10px;">atleast one uppercase, numeric digit, lowercase, special character, length of 6-20</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="specialization *" name="specialization" [(ngModel)]="doctor.specialization" required 
+                                #specialization="ngModel"
+                                [class.is-invalid]="specialization.invalid && specialization.touched">
+                               <small style="margin-top: -4%; margin-bottom: 3%;" class="text-danger" [class.d-none]="specialization.valid || specialization.untouched"><b>required field</b></small>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" placeholder="year of experience *" name="experience" [(ngModel)]="doctor.experience" required 
+                                #experience="ngModel"
+                                [class.is-invalid]="experience.invalid && experience.touched">
+                               <small style="margin-top: -4%; margin-bottom: 3%;" class="text-danger" [class.d-none]="experience.valid || experience.untouched"><b>required field</b></small>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="previous working hospital *" name="previoushospital" [(ngModel)]="doctor.previoushospital" required 
+                                #previoushospital="ngModel"
+                                [class.is-invalid]="previoushospital.invalid && previoushospital.touched">
+                               <small style="margin-top: -4%; margin-bottom: 3%;" class="text-danger" [class.d-none]="previoushospital.valid || previoushospital.untouched"><b>required field</b></small>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="address *" name="doctoraddress" [(ngModel)]="doctor.address" required 
+                                #doctoraddress="ngModel"
+                                [class.is-invalid]="doctoraddress.invalid && doctoraddress.touched">
+                               <small style="margin-top: -4%; margin-bottom: 3%;" class="text-danger" [class.d-none]="doctoraddress.valid || doctoraddress.untouched"><b>required field</b></small>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="confirm password *" name="ConfirmPassword" (ngModel)="doctor.password" required 
+                                #doctorconfirmPassword="ngModel"
+                                [class.is-invalid]="doctorconfirmPassword.invalid && doctorconfirmPassword.touched">
+                                <small style="margin-top: -4%; margin-bottom: 3%;" class="text-danger" [class.d-none]="(doctorconfirmPassword.value == doctorpassword.value) || doctorconfirmPassword.untouched"><b>password not matched</b></small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox" style="margin-top: -8%; margin-left: 11%;">
+                        <small style="color: gray;"><input type="checkbox" class="checkbox" name="remember" required> I agree to all Terms & Conditions</small>
+                    </div>
+                    <button [disabled]="doctorform.form.invalid" type="submit" class="btnRegister">Register</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>				                            

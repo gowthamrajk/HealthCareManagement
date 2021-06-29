@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+
+.panel-body{
+  margin-left: 1%;
+  margin-right: 2%;
+}
+thead{
+  background-color: rgb(35, 136, 106);
+}
+table, td{
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+}
+table, td, tr{
+  border: 1px solid rgb(163, 161, 161);
+  font-family: serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: large;
+}
+
+th{
+  text-transform: uppercase;
+  color: white;
+  font-family: Helvetica;
+  font-style: italic;
+  font-size: normal;
+}
+td{
+  text-transform:none;
+}
+.accepted{
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(30, 116, 30);
+  padding: 5px 10px 5px 10px;
+  color: white;
+  font-weight: bolder;
+}
+.pending{
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(196, 137, 28);
+  padding: 5px 10px 5px 10px;
+  color: white;
+  font-weight: bolder;
+}
+.rejected{
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: red;
+  padding: 5px 10px 5px 10px;
+  color: white;
+  font-weight: bolder;
+}
+
+.panel-body{
+  margin-left: 1%;
+  margin-right: 2%;
+}
+thead{
+  background-color: rgb(151, 44, 44);
+}
+table, td{
+  text-align: center;
+  align-items: center;
+  vertical-align: middle;
+}
+table, td, tr{
+  border: 1px solid rgb(163, 161, 161);
+  font-family: serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: large;
+}
+
+th{
+  text-transform: uppercase;
+  color: white;
+  font-family: Helvetica;
+  font-style: italic;
+  font-size: normal;
+}
+td{
+  text-transform:none;
+}
+.accepted{
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(30, 116, 30);
+  padding: 5px 10px 5px 10px;
+  color: white;
+  font-weight: bolder;
+}
+.pending{
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgb(196, 137, 28);
+  padding: 5px 10px 5px 10px;
+  color: white;
+  font-weight: bolder;
+}
+.rejected{
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: red;
+  padding: 5px 10px 5px 10px;
+  color: white;
+  font-weight: bolder;
+}

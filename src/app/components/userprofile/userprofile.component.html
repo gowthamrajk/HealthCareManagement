@@ -1,0 +1,78 @@
+<app-header></app-header>
+
+<div class="row" id="profilecard">
+    <div *ngFor="let user of profileDetails | async" id="bloodCards">
+        <a><img *ngIf="user.gender === 'Male' || user.gender === 'male'" class="bloodimg" [src]="'assets/img/maleuser.png'" width="120" height="120"></a>
+        <a><img *ngIf="user.gender === 'Female' || user.gender === 'female'" class="bloodimg" [src]="'assets/img/femaleuser.png'" width="120" height="120"></a>
+        <div class="card-block">
+            <div class="text"><b style="color: navy;">User Name : </b><b class="element" style="margin-left: 53px;"> {{user.username}}</b> </div>
+            <div class="text"><b style="color: navy;">Mobile Number : </b><b class="element" style="margin-left: 12px;"> {{user.mobile}}</b> </div>
+            <div class="text"><b style="color: navy;">Gender : </b><b class="element" style="margin-left: 80px;"> {{user.gender}}</b> </div>
+            <div class="text"><b style="color: navy;">Mail ID : </b><b class="element" style="margin-left: 78px;"> {{user.email}}</b> </div>
+            <div class="text"><b style="color: navy;">Age : </b><b class="element" style="margin-left: 110px;"> {{user.age}} years</b> </div>
+            <div class="btndiv" style="align-items: center;"><button class="editbtn" (click)="editProfile()"><i class="fa fa-edit"></i> edit</button></div>
+            <small id="message" *ngIf="temp === true" style="text-align: center; margin-top: 3%; color: green;"><b>Profile Updated Successfully !!!</b></small> 
+          </div>
+    </div>
+  </div>
+  
+    <div class="container" id="profileform">
+      <h3 class="textual">Update User Profile</h3>
+      <form #Updateform="ngForm" (ngSubmit)="updateUserProfile()">
+        <small *ngIf="temp === false" style="text-align: center; color: navy;"><b>Dear {{loggedUser}}, update your profile here</b></small>
+        <small *ngIf="temp === true" style="text-align: center; color: green;"><b>Profile Updated Successfully !!!</b></small>  
+        <div class="form-group">
+          <label for="email">Email : <b class="text-danger">*</b></label>
+          <input type="email" class="form-control" id="email" value="user.email" placeholder="enter email" name="email" [(ngModel)]="user.email" required pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+          #email="ngModel"
+          [class.is-invalid]="email.invalid && email.touched"
+          >
+        <div *ngIf="email.errors && (email.invalid && email.touched)">
+          <small class="text-danger" *ngIf="email.errors.pattern"><b>Invalid email Id</b></small>
+        </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="username">UserName: <b class="text-danger">*</b></label>
+          <input type="text" class="form-control" placeholder="enter username" value="user.username" name="username" required [(ngModel)]="user.username"
+          #username="ngModel"
+          [class.is-invalid]="username.invalid && username.touched">
+        </div>
+  
+        <div class="form-group">
+          <label for="gender">Gender: <b class="text-danger">*</b></label>
+          <select class="form-control" id="sel1" value="user.gender" name="gender" [(ngModel)]="user.gender" required
+              #gender="ngModel">
+                  <option selected>Male</option>
+                  <option>Female</option>
+                  <option>Others</option>
+              </select>
+         </div>
+  
+        <div class="form-group">
+          <label for="age">Age: <b class="text-danger">*</b></label>
+          <input type="number" class="form-control" value="user.age" placeholder="enter your age" name="age" [(ngModel)]="user.age" required
+          #age="ngModel"
+          [class.is-invalid]="age.invalid && age.touched">
+         <small class="text-danger" [class.d-none]="age.valid || age.untouched"><b>required field</b></small>
+        </div>
+  
+        <div class="form-group">
+          <label for="mobile">Mobile Number: <b class="text-danger">*</b></label>
+          <input type="tel" class="form-control" placeholder="enter mobile number" value="user.mobile" name="mobile" [(ngModel)]="user.mobile" required
+          #mobile="ngModel"
+          [class.is-invalid]="mobile.invalid && mobile.touched">
+         </div>
+  
+        <div class="form-group">
+          <label for="pwd">Password: <b class="text-danger">*</b></label>
+          <input type="password" class="form-control" placeholder="enter password" value="user.password" name="pwd" [(ngModel)]="user.password" required
+          #password="ngModel"
+          [class.is-invalid]="password.invalid && password.touched"> 
+        </div>
+  
+        <button [disabled]="Updateform.form.invalid" type="submit" class="btn registerbtn">Update</button>
+      </form>
+    </div>
+  
+  <app-footer></app-footer>

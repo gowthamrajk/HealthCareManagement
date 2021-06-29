@@ -1,0 +1,41 @@
+ 
+  .sidebar-logo {
+    padding: 10px 15px 10px 30px;
+    font-size: 20px;
+    text-align: right;
+    background-color: #0d0a35;
+    width: 100%;
+  }
+  ::ng-deep .navCss nav
+  {
+    background-color: #0d0a35; 
+    color: white;
+    font-weight: 600;
+  }
+  #nav-link:hover{
+    cursor: pointer;
+    background-color: #23ad9b;
+    padding: 5px 8px 5px 8px;
+    border-radius: 15px;
+  }
+  .dropdown-item:hover{
+    cursor: pointer;
+    color: white;
+    font-weight: 300;
+    background-color: #e2e2e2;
+  }
+  .logoutbtn{
+    border: none;
+    background:transparent;
+    color: white;
+    border-radius: 15px;
+    margin-left: 10px;
+    padding: 5px 10px 5px 10px;
+    font-size: small;
+  }
+  .logoutbtn:hover{
+    cursor: pointer;
+    background-color: #23ad9b;
+    padding: 5px 8px 5px 8px;
+    border-radius: 15px;
+  }

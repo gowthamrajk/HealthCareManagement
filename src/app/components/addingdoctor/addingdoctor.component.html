@@ -1,0 +1,99 @@
+<app-header></app-header>
+
+<div class="container">
+    <h2 class="textual"><i class="fa fa-user-md"></i> New Doctor </h2>
+    <small style="color:rgb(179, 11, 11); font-weight: bold;">On adding a doctor, he will be approved to work in the hospital management by default</small>
+    <form #addDoctorform="ngForm" (ngSubmit)="addDoctor()">
+        
+        <div class="form-group">
+            <label for="doctorname">Doctor Name: <b class="text-danger">*</b></label>
+            <input type="text" class="form-control" placeholder="enter doctor name" name="doctorname" [(ngModel)]="doctor.doctorname" required 
+            #doctorname="ngModel"
+            [class.is-invalid]="doctorname.invalid && doctorname.touched">
+           <small class="text-danger" [class.d-none]="doctorname.valid || doctorname.untouched"><b>required field</b></small>
+        </div>
+        <small style="color: gray; font-size: 10px;">Please enter full name of the doctor with initial</small>
+
+        <div class="form-group">
+            <label for="email">Doctor Email address: <b class="text-danger">*</b></label>
+            <input type="email" class="form-control" placeholder="enter email address" name="email" [(ngModel)]="doctor.email" required pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+            #email="ngModel"
+            [class.is-invalid]="email.invalid && email.touched">
+            <div *ngIf="email.errors && (email.invalid && email.touched)">
+                <small class="text-danger" *ngIf="email.errors.required"><b>required field</b></small>
+                <small class="text-danger" *ngIf="email.errors.pattern"><b>Invalid email Id</b></small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="mobile">Doctor Mobile Number: <b class="text-danger">*</b></label>
+            <input type="tel" class="form-control" placeholder="enter mobile number" name="mobile" [(ngModel)]="doctor.mobile" required 
+            #mobile="ngModel"
+            [class.is-invalid]="mobile.invalid && mobile.touched">
+           <small class="text-danger" [class.d-none]="mobile.valid || mobile.untouched"><b>required field</b></small>
+        </div>
+        <small style="color: gray; font-size: 10px;">Please enter 10 digit valid mobile number</small>
+
+        <div class="form-group">
+            <label for="gender">Doctor Gender: <b class="text-danger">*</b></label>
+            <select class="form-control" id="sel1" name="gender" [(ngModel)]="doctor.gender"
+            #gender="ngModel">
+                <option selected>Male</option>
+                <option>Female</option>
+                <option>Others</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="experience">Doctor Experience: <b class="text-danger">*</b></label>
+            <input type="number" class="form-control" placeholder="enter experience (in years)" name="experience" [(ngModel)]="doctor.experience" required 
+            #experience="ngModel"
+            [class.is-invalid]="experience.invalid && experience.touched">
+           <small class="text-danger" [class.d-none]="experience.valid || experience.untouched"><b>required field</b></small>
+        </div>
+        <small style="color: rgb(179, 11, 11); font-size: 10px; font-weight: bold;">Should have a minimum experience of 3 years</small>
+
+        <div class="form-group">
+            <label for="specialization">Doctor Specialization: <b class="text-danger">*</b></label>
+            <input type="text" class="form-control" placeholder="enter specialization" name="specialization" [(ngModel)]="doctor.specialization" required 
+            #specialization="ngModel"
+            [class.is-invalid]="specialization.invalid && specialization.touched">
+           <small class="text-danger" [class.d-none]="specialization.valid || specialization.untouched"><b>required field</b></small>
+        </div>
+        <small style="color: gray; font-size: 10px;">Please mention his/her specialization (eg: Cardiologist, Gynacologist)</small>
+
+        <div class="form-group">
+            <label for="previoushospital">Doctor's Previous Hospital: <b class="text-danger">*</b></label>
+            <input type="text" class="form-control" placeholder="enter previous working hospital" name="previoushospital" [(ngModel)]="doctor.previoushospital" required 
+            #previoushospital="ngModel"
+            [class.is-invalid]="previoushospital.invalid && previoushospital.touched">
+           <small class="text-danger" [class.d-none]="previoushospital.valid || previoushospital.untouched"><b>required field</b></small>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Doctor Address: <b class="text-danger">*</b></label>
+            <input type="text" class="form-control" placeholder="enter doctor address" name="address" [(ngModel)]="doctor.address" required 
+            #address="ngModel"
+            [class.is-invalid]="address.invalid && address.touched">
+           <small class="text-danger" [class.d-none]="address.valid || address.untouched"><b>required field</b></small>
+        </div>
+        <small style="color: gray; font-size: 10px;">Please mention proper donor address for reference purpose</small>
+        
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="password *" name="pwd" [(ngModel)]="doctor.password" required 
+            #doctorpassword="ngModel"
+            [class.is-invalid]="doctorpassword.invalid && doctorpassword.touched">
+            <div style="margin-top: -4%; margin-bottom: 3%;" *ngIf="doctorpassword.errors && doctorpassword.invalid && doctorpassword.touched">
+              <small class="text-danger" *ngIf="doctorpassword.errors.required"><b>required field</b></small>
+            </div>
+            <small style="color: gray; font-size: 10px;">use "1234" as temporary password for now and inform doctor to update password later</small>
+        </div>
+
+       <div class="checkbox" style="margin-top: 5px;">
+        <small style="color: gray;"><input type="checkbox" name="remember" required> Is he/she is an Authorized Doctor </small><small style="color:rgb(179, 11, 11); font-weight: bold;"> (adding proxy doctors is against to management's T&C !!!)</small>
+      </div>
+      <button style="margin-top: 15px;" [disabled]="addDoctorform.form.invalid" type="submit" class="btn registerbtn"><i class="fa fa-plus"></i>&nbsp; Add Doctor</button>
+    </form>
+  </div>
+
+  <app-footer></app-footer>
