@@ -169,3 +169,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![image](https://user-images.githubusercontent.com/43011442/123929958-e4227d80-d9ac-11eb-95e4-507beae67d3c.png)
 
 
+## User List
+
+![image](https://user-images.githubusercontent.com/43011442/123930049-fd2b2e80-d9ac-11eb-88df-f78e49dde6ca.png)
+
+
+## Patient List
+
