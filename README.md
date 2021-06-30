@@ -157,3 +157,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![image](https://user-images.githubusercontent.com/43011442/123929615-9c9bf180-d9ac-11eb-85fb-c43902cdcffb.png)
 
 
+## Doctor's Approval Status
+
+![image](https://user-images.githubusercontent.com/43011442/123929723-bb9a8380-d9ac-11eb-80b0-f9b11b9d68d5.png)
+![image](https://user-images.githubusercontent.com/43011442/123929760-c3f2be80-d9ac-11eb-93a9-00a6882d96e7.png)
+
+
