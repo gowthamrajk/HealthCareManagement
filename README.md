@@ -2,8 +2,20 @@
 
 ![](https://img.shields.io/github/languages/count/gowthamrajk/HealthCareManagement)   ![](https://img.shields.io/github/languages/top/gowthamrajk/HealthCareManagement)
 
-- It is a **HealthCare Management System** which can facilitate you to check your hospital status, profile information, doctor information, check slots, book doctor appointments, review the appointments, generate and print your respective prescriptions.
+- It is a **HealthCare Management System** which can facilitate you to check your hospital status, profile information, doctor information, check slots, book doctor appointments, review the appointments, generate and print your respective prescriptions and manage the entire application.
 - It has 3 modes of operation as **1) ADMIN 2) DOCTOR 3) USER**
+
+## ADMIN Mode 🔭
+
+This mode makes you as an admin and you can perform various activities like...
+- Adding a Doctor
+- Managing Users/patients
+- Managing Doctors
+- Check the available Doctor Slots
+- view Doctor List, Patient List, User List
+- Accept or Reject the Doctors when they register as a new Doctor for this application
+- Get various details on the admin dashboard as Total User, Total doctors, Total slots, Patients, Prescriptions given & Appointments booked.
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.3.
 
