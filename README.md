@@ -204,3 +204,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![image](https://user-images.githubusercontent.com/43011442/123931166-ff41bd00-d9ad-11eb-93be-b444ae7ef669.png)
 
 
+## Add Booking slots
+
+![image](https://user-images.githubusercontent.com/43011442/123931427-1da7b880-d9ae-11eb-8f98-f4428a042d86.png)
+![image](https://user-images.githubusercontent.com/43011442/123931166-ff41bd00-d9ad-11eb-93be-b444ae7ef669.png)
+
