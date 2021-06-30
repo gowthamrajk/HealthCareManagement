@@ -137,7 +137,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![image](https://user-images.githubusercontent.com/43011442/123928416-83467580-d9ab-11eb-968d-13321ae4d262.png)
 
 
-# ADMIN MODE: 
+# ADMIN MODE: 📫
 
 ## Admin Dashboard
 
@@ -175,4 +175,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## Patient List
+
+![image](https://user-images.githubusercontent.com/43011442/123930135-13d18580-d9ad-11eb-8ebe-471cf3a7a0b0.png)
+![image](https://user-images.githubusercontent.com/43011442/123929760-c3f2be80-d9ac-11eb-93a9-00a6882d96e7.png)
+
+
+# DOCTOR MODE ❤️
 
