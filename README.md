@@ -233,5 +233,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![image](https://user-images.githubusercontent.com/43011442/123932150-c9e99f00-d9ae-11eb-814f-2f6a11c86fc3.png)
 
 
+## Add New Prescription
+
+![image](https://user-images.githubusercontent.com/43011442/123932251-e4237d00-d9ae-11eb-8307-7419a017de9a.png)
+![image](https://user-images.githubusercontent.com/43011442/123932330-f7cee380-d9ae-11eb-9638-ba578c675d24.png)
 
 
