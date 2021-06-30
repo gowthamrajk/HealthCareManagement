@@ -188,3 +188,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![image](https://user-images.githubusercontent.com/43011442/123930593-880c2900-d9ad-11eb-84ab-3016da3fae7e.png)
 
 
+![image](https://user-images.githubusercontent.com/43011442/123930691-9ce8bc80-d9ad-11eb-883b-db924ef394cc.png)
+![image](https://user-images.githubusercontent.com/43011442/123930760-a96d1500-d9ad-11eb-8d2c-1402b49d52f0.png)
+
+
+## Edit Doctor Profile
+
