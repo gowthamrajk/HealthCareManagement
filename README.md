@@ -257,5 +257,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Doctor List
 
+![image](https://user-images.githubusercontent.com/43011442/123933672-37e29600-d9b0-11eb-9a52-15ba40189dc5.png)
+![image](https://user-images.githubusercontent.com/43011442/123933717-416bfe00-d9b0-11eb-8c12-f23281f2be09.png)
+
 
 
