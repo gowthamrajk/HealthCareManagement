@@ -261,4 +261,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![image](https://user-images.githubusercontent.com/43011442/123933717-416bfe00-d9b0-11eb-8c12-f23281f2be09.png)
 
 
+## Check Available Slots
+
+![image](https://user-images.githubusercontent.com/43011442/123933823-5c3e7280-d9b0-11eb-8670-b60b0546cbdc.png)
+![image](https://user-images.githubusercontent.com/43011442/123933856-6496ad80-d9b0-11eb-96e7-41b6d0083b93.png)
+
+
+
 
