@@ -41,7 +41,7 @@ export class ScheduleslotsComponent implements OnInit {
     this._service.addBookingSlots(this.slot).subscribe(
       data => {
         console.log("Slots added Successfully");
-        this._router.navigate(['/scheduleslots']);
+        this._router.navigate(['/doctordashboard']);
       },
       error => {
         console.log("process Failed");
