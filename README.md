@@ -283,3 +283,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![image](https://user-images.githubusercontent.com/43011442/123934398-de2e9b80-d9b0-11eb-96ef-25d76546556f.png)
 
 
+## Check Patient's Prescription
+
+![image](https://user-images.githubusercontent.com/43011442/123934536-028a7800-d9b1-11eb-9016-1d3966e7e13c.png)
+![image](https://user-images.githubusercontent.com/43011442/123934398-de2e9b80-d9b0-11eb-96ef-25d76546556f.png)
+
