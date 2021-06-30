@@ -16,7 +16,7 @@ This mode makes you as an admin and you can perform various activities like...
 - Accept or Reject the Doctors when they register as a new Doctor for this application
 - Get various details on the admin dashboard as Total User, Total doctors, Total slots, Patients, Prescriptions given & Appointments booked.
 
-## DOCTOR Mode  
+## DOCTOR Mode ❤️
 
 This mode makes you as a doctor and you can perform various activities like...
 - Dcotor can register for a new account in-order to login to the portal
