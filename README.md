@@ -83,3 +83,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![Bootstrap](https://img.shields.io/static/v1?style=for-the-badge&message=Bootstrap&color=7952B3&logo=Bootstrap&logoColor=FFFFFF&label=)
 ![Font Awesome](https://img.shields.io/static/v1?style=for-the-badge&message=Font+Awesome&color=339AF0&logo=Font+Awesome&logoColor=FFFFFF&label=)
 ![Google Fonts](https://img.shields.io/static/v1?style=for-the-badge&message=Google+Fonts&color=4285F4&logo=Google+Fonts&logoColor=FFFFFF&label=)
+
+## Server Side ⚡
+
+![Spring Boot](https://img.shields.io/static/v1?style=for-the-badge&message=Spring+Boot&color=6DB33F&logo=Spring+Boot&logoColor=FFFFFF&label=)
+![Java](https://img.shields.io/static/v1?style=for-the-badge&message=Java&color=DD0031&logo=Java&logoColor=FFFFFF&label=)
+![Spring](https://img.shields.io/static/v1?style=for-the-badge&message=Spring+Security&color=6DB33F&logo=Spring&logoColor=FFFFFF&label=)
+![Spring Boot](https://img.shields.io/static/v1?style=for-the-badge&message=Spring+Web&color=6DB33F&logo=Spring+Boot&logoColor=FFFFFF&label=)
+![Hibernate](https://img.shields.io/static/v1?style=for-the-badge&message=Hibernate&color=59666C&logo=Hibernate&logoColor=FFFFFF&label=)
