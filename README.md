@@ -239,3 +239,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![image](https://user-images.githubusercontent.com/43011442/123932330-f7cee380-d9ae-11eb-9638-ba578c675d24.png)
 
 
+# USER MODE 😄
+
+## User Dashboard
+
+![image](https://user-images.githubusercontent.com/43011442/123932496-23ea6480-d9af-11eb-98f8-09cfc95b878b.png)
+![image](https://user-images.githubusercontent.com/43011442/123932599-38c6f800-d9af-11eb-9fc8-b604e5acedb2.png)
+
+
+
