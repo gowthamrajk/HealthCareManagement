@@ -137,3 +137,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![image](https://user-images.githubusercontent.com/43011442/123928416-83467580-d9ab-11eb-968d-13321ae4d262.png)
 
 
+# ADMIN MODE: 
+
+## Admin Dashboard
+
