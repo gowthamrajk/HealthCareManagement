@@ -303,3 +303,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![image](https://user-images.githubusercontent.com/43011442/123935096-89d7eb80-d9b1-11eb-876d-30cd6fb740ea.png)
 
 
+
+
+**For more queries, reach me through gowthamraj692@gmail.com or whatsapp @ 9698382306**
+
+
+<div align="center">
+  
+# Show some ❤️ by starring this repository !!!
+  
+</div>
+
