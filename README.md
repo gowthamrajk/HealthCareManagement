@@ -228,3 +228,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Doctor's Today Appointments
 
+![image](https://user-images.githubusercontent.com/43011442/123932072-b5a5a200-d9ae-11eb-9364-069da3a7a3dc.png)
+![image](https://user-images.githubusercontent.com/43011442/123932125-c2c29100-d9ae-11eb-8213-78c339bbe906.png)
+![image](https://user-images.githubusercontent.com/43011442/123932150-c9e99f00-d9ae-11eb-814f-2f6a11c86fc3.png)
+
+
+
+
