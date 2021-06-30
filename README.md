@@ -252,5 +252,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Edit User Profile
 
+![image](https://user-images.githubusercontent.com/43011442/123933556-200b1200-d9b0-11eb-9c2d-796d88953e59.png)
+
+
+## Doctor List
+
 
 
