@@ -120,3 +120,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Login Page
 
+![image](https://user-images.githubusercontent.com/43011442/123927095-239b9a80-d9aa-11eb-9ee8-7ce334e67bde.png)
+
+
+![image](https://user-images.githubusercontent.com/43011442/123927171-344c1080-d9aa-11eb-9cc5-42d901660c26.png)
+
+
+![image](https://user-images.githubusercontent.com/43011442/123927280-4ded5800-d9aa-11eb-89ba-79cb5ec3ed50.png)
+
+
