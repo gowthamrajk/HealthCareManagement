@@ -113,3 +113,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Landing Page
 
+![image](https://user-images.githubusercontent.com/43011442/123924855-fa7a0a80-d9a7-11eb-905a-625237270983.png)
+![image](https://user-images.githubusercontent.com/43011442/123924922-08c82680-d9a8-11eb-8046-051ed9af3804.png)
+![image](https://user-images.githubusercontent.com/43011442/123924993-1c738d00-d9a8-11eb-86cc-4a128b7dace4.png)
+
+
+## Login Page
+
