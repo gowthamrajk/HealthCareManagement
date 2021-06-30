@@ -141,3 +141,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Admin Dashboard
 
+![image](https://user-images.githubusercontent.com/43011442/123928786-d91b1d80-d9ab-11eb-9ca3-a46c81d91575.png)
+![image](https://user-images.githubusercontent.com/43011442/123928837-e2a48580-d9ab-11eb-90b1-69acc1d202fd.png)
+![image](https://user-images.githubusercontent.com/43011442/123928879-eafcc080-d9ab-11eb-8520-772d4e8fd3d4.png)
+
