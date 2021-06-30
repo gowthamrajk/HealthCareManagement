@@ -210,8 +210,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![image](https://user-images.githubusercontent.com/43011442/123931166-ff41bd00-d9ad-11eb-93be-b444ae7ef669.png)
 
 ![image](https://user-images.githubusercontent.com/43011442/123931556-3d3ee100-d9ae-11eb-881f-126750d20226.png)
-![image](https://user-images.githubusercontent.com/43011442/123931613-4c259380-d9ae-11eb-99b1-c87a11fd944b.png)
-![image](https://user-images.githubusercontent.com/43011442/123931641-521b7480-d9ae-11eb-8d71-4729e3a046c3.png)
+![image](https://user-images.githubusercontent.com/43011442/123933091-abd06e80-d9af-11eb-99e2-b62273aab603.png)
+![image](https://user-images.githubusercontent.com/43011442/123933149-b985f400-d9af-11eb-8364-ab554729b551.png)
 
 
 ## Doctor List
