@@ -182,3 +182,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # DOCTOR MODE ❤️
 
+## Doctor Dashboard
+
+![image](https://user-images.githubusercontent.com/43011442/123930527-7a56a380-d9ad-11eb-9eb6-c7080f4470d8.png)
+![image](https://user-images.githubusercontent.com/43011442/123930593-880c2900-d9ad-11eb-84ab-3016da3fae7e.png)
+
+
