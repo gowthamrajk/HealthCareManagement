@@ -128,4 +128,3 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ![image](https://user-images.githubusercontent.com/43011442/123927280-4ded5800-d9aa-11eb-89ba-79cb5ec3ed50.png)
 
-
