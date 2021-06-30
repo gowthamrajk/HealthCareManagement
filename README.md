@@ -298,4 +298,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![image](https://user-images.githubusercontent.com/43011442/123934935-6319b500-d9b1-11eb-8848-53600182ffc1.png)
 
 
+## Print Prescription
+
+![image](https://user-images.githubusercontent.com/43011442/123935096-89d7eb80-d9b1-11eb-876d-30cd6fb740ea.png)
+
 
