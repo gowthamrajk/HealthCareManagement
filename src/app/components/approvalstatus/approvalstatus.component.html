@@ -4,7 +4,7 @@
   <form #tempform="ngForm" (ngSubmit)="searchPatient()">
   <div class="form-group">
       <label for="patientname">Patient Email Address: <b class="text-danger">*</b></label>
-      <input type="text" class="form-control" placeholder="enter patient name" name="patientname" [(ngModel)]="this.mail" required 
+      <input type="text" class="form-control" placeholder="enter patient email" name="patientname" [(ngModel)]="this.mail" required 
       #patientname="ngModel"
       [class.is-invalid]="patientname.invalid && patientname.touched">
      <small class="text-danger" [class.d-none]="patientname.valid || patientname.untouched"><b>required field</b></small>
