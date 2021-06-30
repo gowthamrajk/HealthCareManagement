@@ -274,11 +274,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![image](https://user-images.githubusercontent.com/43011442/123934130-9c055a00-d9b0-11eb-823c-797c371d2828.png)
 
 
-## Appointment Approval Status
+## Check Appointment Approval Status
 
 ![image](https://user-images.githubusercontent.com/43011442/123934269-be977300-d9b0-11eb-8508-4adc73988781.png)
 ![image](https://user-images.githubusercontent.com/43011442/123934391-dcfd6e80-d9b0-11eb-808e-fa0a5b2ea0f4.png)
 
+
+## View Appointment Approval Status
 ![image](https://user-images.githubusercontent.com/43011442/123934331-cf47e900-d9b0-11eb-9304-f8f90df3e926.png)
 ![image](https://user-images.githubusercontent.com/43011442/123934398-de2e9b80-d9b0-11eb-96ef-25d76546556f.png)
 
@@ -287,4 +289,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ![image](https://user-images.githubusercontent.com/43011442/123934536-028a7800-d9b1-11eb-9016-1d3966e7e13c.png)
 ![image](https://user-images.githubusercontent.com/43011442/123934398-de2e9b80-d9b0-11eb-96ef-25d76546556f.png)
+
+
+## View Patient's Prescription
+
+![image](https://user-images.githubusercontent.com/43011442/123934676-2483fa80-d9b1-11eb-90f8-d29a5670f82b.png)
+![image](https://user-images.githubusercontent.com/43011442/123934816-48474080-d9b1-11eb-8b79-368800d7bdd1.png)
+![image](https://user-images.githubusercontent.com/43011442/123934935-6319b500-d9b1-11eb-8848-53600182ffc1.png)
+
+
 
