@@ -267,5 +267,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![image](https://user-images.githubusercontent.com/43011442/123933856-6496ad80-d9b0-11eb-96e7-41b6d0083b93.png)
 
 
+## Book New Appointment
+
+![image](https://user-images.githubusercontent.com/43011442/123933999-8001b880-d9b0-11eb-9de8-f9a808e1bebd.png)
+![image](https://user-images.githubusercontent.com/43011442/123934040-8a23b700-d9b0-11eb-928e-a35612cb1e5f.png)
+![image](https://user-images.githubusercontent.com/43011442/123934130-9c055a00-d9b0-11eb-823c-797c371d2828.png)
 
 
