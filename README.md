@@ -163,3 +163,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![image](https://user-images.githubusercontent.com/43011442/123929760-c3f2be80-d9ac-11eb-93a9-00a6882d96e7.png)
 
 
+## Doctor List
+
+![image](https://user-images.githubusercontent.com/43011442/123929887-da991580-d9ac-11eb-9397-a1247add42f8.png)
+![image](https://user-images.githubusercontent.com/43011442/123929958-e4227d80-d9ac-11eb-95e4-507beae67d3c.png)
+
+
