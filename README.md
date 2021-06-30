@@ -16,6 +16,32 @@ This mode makes you as an admin and you can perform various activities like...
 - Accept or Reject the Doctors when they register as a new Doctor for this application
 - Get various details on the admin dashboard as Total User, Total doctors, Total slots, Patients, Prescriptions given & Appointments booked.
 
+## DOCTOR Mode  
+
+This mode makes you as a doctor and you can perform various activities like...
+- Dcotor can register for a new account in-order to login to the portal
+- Check the available doctors List
+- check the his/her today's appointments
+- check his/her patient list
+- View & Edit user profile details
+- Add you available slot and check slot schedules
+- check your registration approval as a valid doctor by the ADMIN
+- Add new patient prescription
+- Get various details on the doctor dashboard as Total Prescriptions given, Total doctors, Total slots, Patients.
+
+## USER Mode 😄
+
+This mode makes you as a user and you can perform various activities like...
+- User can register for a new account in-order to login to the portal
+- Check the available doctors List
+- check the available slots for booking
+- View & Edit user profile details
+- Book a New Appoinment
+- check your appointment approval by the doctor
+- view your doctors prescription and print it.
+- Get various details on the user dashboard as Total User, Total doctors, Total slots, Patients.
+
+**[Additional Feature: The user can even print their respective prescriptions]**
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.3.
 
