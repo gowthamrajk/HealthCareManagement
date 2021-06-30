@@ -157,7 +157,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![image](https://user-images.githubusercontent.com/43011442/123929615-9c9bf180-d9ac-11eb-85fb-c43902cdcffb.png)
 
 
-## Doctor's Approval Status
+## Approve Doctors
 
 ![image](https://user-images.githubusercontent.com/43011442/123929723-bb9a8380-d9ac-11eb-80b0-f9b11b9d68d5.png)
 ![image](https://user-images.githubusercontent.com/43011442/123929760-c3f2be80-d9ac-11eb-93a9-00a6882d96e7.png)
@@ -196,5 +196,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ![image](https://user-images.githubusercontent.com/43011442/123930885-c3a6f300-d9ad-11eb-9af4-d817b91d3a15.png)
 ![image](https://user-images.githubusercontent.com/43011442/123930923-cbff2e00-d9ad-11eb-9be9-71e899edd27e.png)
+
+
+## Doctor's Approval Status
+
+![image](https://user-images.githubusercontent.com/43011442/123931117-f51fbe80-d9ad-11eb-9507-a5eddc594fde.png)
+![image](https://user-images.githubusercontent.com/43011442/123931166-ff41bd00-d9ad-11eb-93be-b444ae7ef669.png)
 
 
