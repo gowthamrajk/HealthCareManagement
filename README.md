@@ -277,6 +277,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Appointment Approval Status
 
 ![image](https://user-images.githubusercontent.com/43011442/123934269-be977300-d9b0-11eb-8508-4adc73988781.png)
-
+![image](https://user-images.githubusercontent.com/43011442/123934391-dcfd6e80-d9b0-11eb-808e-fa0a5b2ea0f4.png)
 
 ![image](https://user-images.githubusercontent.com/43011442/123934331-cf47e900-d9b0-11eb-9304-f8f90df3e926.png)
+![image](https://user-images.githubusercontent.com/43011442/123934398-de2e9b80-d9b0-11eb-96ef-25d76546556f.png)
+
+
