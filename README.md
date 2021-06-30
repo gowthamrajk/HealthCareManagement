@@ -150,3 +150,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![image](https://user-images.githubusercontent.com/43011442/123929239-47f87680-d9ac-11eb-8378-459ec242d946.png)
 
 
+## Adding Doctor
+
+![image](https://user-images.githubusercontent.com/43011442/123929527-82621380-d9ac-11eb-8a0e-95d8ca77cf0f.png)
+![image](https://user-images.githubusercontent.com/43011442/123929577-91e15c80-d9ac-11eb-9ed3-d9611f18b0e4.png)
+![image](https://user-images.githubusercontent.com/43011442/123929615-9c9bf180-d9ac-11eb-85fb-c43902cdcffb.png)
+
+
