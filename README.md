@@ -23,7 +23,7 @@ This mode makes you as a doctor and you can perform various activities like...
 - Check the available doctors List
 - check the his/her today's appointments
 - check his/her patient list
-- View & Edit user profile details
+- View & Edit doctor profile details
 - Add you available slot and check slot schedules
 - check your registration approval as a valid doctor by the ADMIN
 - Add new patient prescription
