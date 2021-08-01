@@ -337,7 +337,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Copyright-and-license 📌
 
-Code and documentation Copyright 2021 : **Gowthamraj K**
+**Code and documentation Copyright 2021 : Gowthamraj K**
 
 
 [website1]: https://sites.google.com/view/code-jamm
